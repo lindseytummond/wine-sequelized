@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS wine_db;
+CREATE DATABASE wine_db;
+
+USE wine_db;
+
+CREATE TABLE wine(
+  id INT NOT NULL AUTO_INCREMENT,
+  wine_name VARCHAR(50) NULL,
+  drank BOOLEAN DEFAULT false,
+  PRIMARY KEY (id)
+);
