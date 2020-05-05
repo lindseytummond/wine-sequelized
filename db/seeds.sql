@@ -1,7 +1,7 @@
-INSERT INTO wines (name, drank)
+INSERT INTO wines (name, taste)
 VALUES ("pinot noir", false),
 ("sauvignon blanc", false),
 ("merlot", false),
-("chardonnay", false),
-("malbec", false),
-("riesling", false)
+("chardonnay", true),
+("melbec", true),
+("riesling", true)

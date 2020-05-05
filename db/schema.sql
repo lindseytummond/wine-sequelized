@@ -3,10 +3,9 @@ CREATE DATABASE wine_db;
 
 USE wine_db;
 
-CREATE TABLE wines
-(
+CREATE TABLE wines (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(50) NULL,
-  drank BOOLEAN DEFAULT false,
+  taste BOOLEAN DEFAULT false,
   PRIMARY KEY (id)
 );
