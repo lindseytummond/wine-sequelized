@@ -5,7 +5,7 @@ $(function() {
     var newTaste = $(this).data("newtaste");
 
     var newTasteState = {
-      tasty: newTaste
+      taste: newTaste
     };
 
     // Send the PUT request.
@@ -26,9 +26,9 @@ $(function() {
     event.preventDefault();
 
     var newWine = {
-      name: $("#ca").val().trim(),
-      tasty: $("[name=tasty]:checked").val().trim(),
-      // tasty: 0
+      name: $("#wine").val().trim(),
+      // taste: $("[name=taste]:checked").val().trim(),
+      taste: 0
     };
 
     // Send the POST request.
