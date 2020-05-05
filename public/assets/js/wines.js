@@ -27,7 +27,8 @@ $(function() {
 
     var newWine = {
       name: $("#ca").val().trim(),
-      tasty: $("[name=tasty]:checked").val().trim()
+      tasty: $("[name=tasty]:checked").val().trim(),
+      // tasty: 0
     };
 
     // Send the POST request.
