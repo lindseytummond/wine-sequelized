@@ -20,7 +20,7 @@ router.post("/api/wine", function(req, res) {
   wine.create([
     "name", "drank"
   ], [
-    req.body.name, req.body.sleepy
+    req.body.name, req.body.drank
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
