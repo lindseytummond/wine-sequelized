@@ -3,20 +3,20 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var wine = require("../models/wines.js");
+var wine = require("../models/wine.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   wine.all(function(data) {
     var hbsObject = {
-      wine: data
+      wines: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
-router.post("/api/wine", function(req, res) {
+router.post("/api/wines", function(req, res) {
   wine.create([
     "name", "drank"
   ], [
@@ -27,7 +27,7 @@ router.post("/api/wine", function(req, res) {
   });
 });
 
-router.put("/api/wine/:id", function(req, res) {
+router.put("/api/wines/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
@@ -44,7 +44,7 @@ router.put("/api/wine/:id", function(req, res) {
   });
 });
 
-// router.delete("/api/wine/:id", function(req, res) {
+// router.delete("/api/wines/:id", function(req, res) {
 //   var condition = "id = " + req.params.id;
 
 //   wine.delete(condition, function(result) {

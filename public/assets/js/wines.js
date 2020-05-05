@@ -9,7 +9,7 @@ $(function() {
       };
   
       // Send the PUT request.
-      $.ajax("/api/wine/" + id, {
+      $.ajax("/api/wines/" + id, {
         type: "PUT",
         data: newDrankState
       }).then(
@@ -26,17 +26,18 @@ $(function() {
       event.preventDefault();
   
       var newWine = {
-        name: $("#wine").val().trim(),
-        drank: 0
+        name: $("#ca").val().trim(),
+        sleepy: $("[name=sleepy]:checked").val().trim(),
+        // drank: 0
       };
   
       // Send the POST request.
-      $.ajax("/api/wine", {
+      $.ajax("/api/wines", {
         type: "POST",
         data: newWine
       }).then(
         function() {
-          console.log("created new wine");
+          console.log("created a new wine");
           // Reload the page to get the updated list
           location.reload();
         }

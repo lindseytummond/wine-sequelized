@@ -1,4 +1,7 @@
-INSERT INTO wine (wine_name, drank)
-VALUES ("pinot noir", true),
+INSERT INTO wines (name, drank)
+VALUES ("pinot noir", false),
 ("sauvignon blanc", false),
-("merlot", false);
+("merlot", false),
+("chardonnay", false),
+("malbec", false),
+("riesling", false)
