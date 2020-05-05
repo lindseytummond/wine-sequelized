@@ -1,6 +1,6 @@
 <h1>Wine!</h1>
 
-<h2>Wine you have drank!</h2>
+<h2>Wines you have drank!</h2>
 
 <ul>
   {{#each wine}}
@@ -20,19 +20,15 @@
   {{/each}}
 </ul>
 
+
 <h2>Add a Wine</h2>
 <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Wine Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
+    <div class="form-group">
+        <label for="wine">Wine Name:</label>
+        <input type="text" id="wine" name="name">
+    </div>
 
-  <div class="form-group">
-    <label for="drank">Drank?</label><br>
-    <input type="radio" name="drank" value="1" checked> Not Drank!<br>
-    <input type="radio" name="drank" value="0"> Drank
-  </div>
+    <button type="submit">Add a Wine</button>
 
-  <button type="submit">Add Wine</button>
 </form>
