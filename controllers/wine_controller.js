@@ -3,13 +3,13 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var wine = require("../models/burger.js");
+var wine = require("../models/wine.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  cat.all(function(data) {
+  wine.all(function(data) {
     var hbsObject = {
-      cats: data
+      wine: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
@@ -18,7 +18,7 @@ router.get("/", function(req, res) {
 
 router.post("/api/wine", function(req, res) {
   wine.create([
-    "name", "sleepy"
+    "name", "drank"
   ], [
     req.body.name, req.body.sleepy
   ], function(result) {
@@ -33,7 +33,7 @@ router.put("/api/wine/:id", function(req, res) {
   console.log("condition", condition);
 
   wine.update({
-    sleepy: req.body.sleepy
+    drank: req.body.drank
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
