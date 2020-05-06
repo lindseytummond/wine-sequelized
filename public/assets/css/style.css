@@ -1,20 +1,34 @@
+.winery {
+  background: url(../img/vineyard-across-mountains.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  height: 100%;
+
+  font-family: 'Acme', sans-serif;
+  /* font-weight: 300; */
+  cursor: pointer;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 5px; 
+  opacity: .9;
+}
+
+ #jumbo{
+  background: #f9e784;
+  border-radius: 5px;
+ }
+
+.col-md-6, .col-md-12 {
+  background: #f9e784;
+  border-radius: 5px;
+  padding: 20px;
+
+}
+
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background: #1e96fc;
+    /* background: #faebd7; */
   }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
+ 

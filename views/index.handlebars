@@ -1,38 +1,72 @@
-<h1>Wine Tasting</h1>
+<body class="winery">
+    
+    <div class="jumbotron" id="jumbo">
+        <h1 class="text-center">Wine Tasting</h1>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-center">Wines I want to Try:</h2>
 
-<h2>Wines I want to Try:</h2>
+        <ul>
+          {{#each wines}}
+            {{#unless taste}}
+              {{> wines/wine-block taste=true}}
+            {{/unless}}
+          {{/each}}
+        </ul>
 
-<ul>
-  {{#each wines}}
-    {{#unless taste}}
-      {{> wines/wine-block taste=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      </div>
 
-<h2>Wines I have Tried:</h2>
+      <div class="col-md-6">
+        <h2 class="text-center">Wines I have Tried:</h2>
 
-<ul>
-  {{#each wines}}
-    {{#if taste}}
-      {{> wines/wine-block taste=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+        <ul>
+          {{#each wines}}
+            {{#if taste}}
+              {{> wines/wine-block taste=false}}
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
 
-<h2>Add a Wine</h2>
-<form class="create-form">
+    <br><br>
+    <div class="row text-center">
+      <div class="col-md-12">
 
-  <div class="form-group">
-    <label for="wine">Wine Name:</label>
-    <input type="text" id="wine" name="name">
-  </div>
+         <h2>Add a Wine</h2>
 
-  {{!-- <div class="form-group">
-    <label for="taste">Wine?</label><br>
-    <input type="radio" name="taste" value="1" checked> No, Thanks!<br>
-    <input type="radio" name="taste" value="0"> Yes, Please!
-  </div> --}}
+        <form class="create-form">
 
-  <button type="submit">Add Wine</button>
-</form>
+          <div class="form-group">
+            <label for="wine">Wine Name:</label>
+            <input type="text" id="wine" name="name">
+          </div>
+
+          <button type="submit">Add Wine</button>
+        </form>
+
+      </div>
+    </div>
+
+
+
+    {{!-- <h2>Add a Wine</h2>
+    <form class="create-form">
+
+      <div class="form-group">
+        <label for="wine">Wine Name:</label>
+        <input type="text" id="wine" name="name">
+      </div> --}}
+
+    {{!-- <div class="form-group">
+      <label for="taste">Wine?</label><br>
+      <input type="radio" name="taste" value="1" checked> No, Thanks!<br>
+      <input type="radio" name="taste" value="0"> Yes, Please!
+    </div> --}}
+
+    {{!-- <button type="submit">Add Wine</button>
+    </form> --}}
+
+</body>
