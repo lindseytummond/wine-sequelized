@@ -1,5 +1,5 @@
 .winery {
-  background: url(../img/vineyard-across-mountains.jpg) no-repeat center center fixed; 
+  background: url(../img/people-toasting.jpg) no-repeat center center fixed; 
   background-size: cover;
   height: 100%;
 
@@ -14,21 +14,38 @@
 }
 
  #jumbo{
-  background: #f9e784;
+  background: #f4d06f;
   border-radius: 5px;
+  color: whitesmoke;
  }
+ 
+#wineTry{
+  color: whitesmoke;
+}
 
-.col-md-6, .col-md-12 {
-  background: #f9e784;
+#submit{
+  background-color:#FF836C
+}
+
+#name{
+  color: #FF836C
+}
+
+.change-taste{
+  background-color: #f4d06f;
+}
+
+.col-md-12 {
+  background: #f4d06f;
   border-radius: 5px;
   padding: 20px;
-
+  color: whitesmoke;
 }
 
 li {
     padding: 5px;
     margin: 5px;
-    background: #1e96fc;
-    /* background: #faebd7; */
+    background: #FF836C;
+    color: whitesmoke;
   }
  

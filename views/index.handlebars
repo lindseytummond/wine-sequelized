@@ -6,7 +6,7 @@
   
     <div class="row">
       <div class="col-md-6">
-        <h2 class="text-center">Wines I want to Try:</h2>
+        <h2 class="text-center" id="wineTry">Wines I want to Try:</h2>
 
         <ul>
           {{#each wines}}
@@ -19,7 +19,7 @@
       </div>
 
       <div class="col-md-6">
-        <h2 class="text-center">Wines I have Tried:</h2>
+        <h2 class="text-center" id="wineTry">Wines I have Tried:</h2>
 
         <ul>
           {{#each wines}}
@@ -40,11 +40,11 @@
         <form class="create-form">
 
           <div class="form-group">
-            <label for="wine">Wine Name:</label>
+            <label for="wine" id="name">Wine Name:</label>
             <input type="text" id="wine" name="name">
           </div>
 
-          <button type="submit">Add Wine</button>
+          <button type="submit" id="submit">Add Wine</button>
         </form>
 
       </div>
