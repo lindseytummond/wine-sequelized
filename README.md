@@ -32,12 +32,12 @@ Future developments would include creating additional features to include wine t
 -   Heroku
 
 ## How to Use:
-Use the following link `https://mysterious-oasis-32428.herokuapp.com/` to open the application. <br>
-Use the 'Wines I want to Try' and "Wines I have Tried' sections to log your wine tasting. <br>
+Use the following link https://mysterious-oasis-32428.herokuapp.com/ to open the application. <br>
+Use the 'Wines I want to Try' and 'Wines I have Tried' sections to log your wine tasting. <br>
 Likewise, utilize the 'Add Wine' button to log different wine varietals you have explored.
 
 ## App Example:
 
 <a href="https://mysterious-oasis-32428.herokuapp.com/" target="_blank">
-   <img src="wine/public/assets/img/wine-tasting.png">
+   <img src="public/assets/img/wine-tasting.png">
 </a>
