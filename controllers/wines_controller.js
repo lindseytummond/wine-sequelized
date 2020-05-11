@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var db = require("../models/wine.js");
+var db = require("../models");
 
 // // Create all our routes and set up logic within those routes where required.
 // router.get("/", function(req, res) {
@@ -19,11 +19,11 @@ var db = require("../models/wine.js");
 // get route -> index
 router.get("/", function (req, res) {
   // send us to the next get function instead.
-  res.redirect("/wines");
+  res.redirect("/wine");
 });
 
 // get route for sequelize
-router.get("/wines", function (req, res) {
+router.get("/wine", function (req, res) {
   db.Wine.findAll()
     .then(function (dbWine) {
       console.log(dbWine);
@@ -46,7 +46,7 @@ router.get("/wines", function (req, res) {
 // });
 
 // get route for sequelize
-router.post("/wines/create", function (req, res) {
+router.post("/wine/create", function (req, res) {
   // edit create for new wine
   db.Wine.create({
     wine_name: req.body.wine_name
@@ -78,7 +78,7 @@ router.post("/wines/create", function (req, res) {
 // });
 
 // put route for sequelize
-router.put("/wines/update/:id", function (req, res) {
+router.put("/wine/update/:id", function (req, res) {
   // update wine
   db.Wine.update({
     taste: true
