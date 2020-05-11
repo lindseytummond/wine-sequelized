@@ -1,14 +1,14 @@
 module.exports = function (sequelize, DataTypes) {
-  var Wine = sequelize.define("Wine", {
-      name: DataTypes.STRING,
-      taste: {
-          type: DataTypes.BOOLEAN,
-          defaultValue: false
-      }
-  }, {
-          timestamps: false,
-      });
-  return Wine;
+    var Wine = sequelize.define("Wine", {
+        name: DataTypes.STRING,
+        taste: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
+        }
+    }, {
+            timestamps: false,
+        });
+    return Wine;
 };
 
 
