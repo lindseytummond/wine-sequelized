@@ -26,11 +26,10 @@ router.get("/", function (req, res) {
 router.get("/wines", function (req, res) {
   // replace old function with sequelize function
   db.Wine.findAll()
-    // use promise method to pass the burgers...
     .then(function (dbWine) {
       console.log(dbWine);
       // into the main index, updating the page
-      var hbsObject = { wine: dbWine };
+      var hbsObject = { wines: dbWine };
       return res.render("index", hbsObject);
     });
 });
