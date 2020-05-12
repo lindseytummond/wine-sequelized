@@ -5,7 +5,7 @@ var router = express.Router();
 // Import the model (cat.js) to use its database functions.
 var db = require("../models");
 
-// // Create all our routes and set up logic within those routes where required.
+// Create all our routes and set up logic within those routes where required.
 // router.get("/", function(req, res) {
 //   wine.all(function(data) {
 //     var hbsObject = {
@@ -27,12 +27,14 @@ router.get("/wines", function (req, res) {
   // replace old function with sequelize function
   db.Wine.findAll()
     .then(function (dbWine) {
-      console.log(dbWine);
-      // into the main index, updating the page
-      var hbsObject = { wines: dbWine };
-      return res.render("index", hbsObject);
+      // console.log(dbWine);
+      var hbsObject = {wines: dbWine};
+      console.log(hbsObject.wines[0].taste)
+      res.render("index", hbsObject);
+
     });
 });
+
 
 // router.post("/api/wines", function(req, res) {
 //   wine.create([
@@ -45,7 +47,7 @@ router.get("/wines", function (req, res) {
 //   });
 // });
 
-// get route for sequelize
+// post route for sequelize
 router.post("/wines/create", function (req, res) {
   // edit create for new wine
   db.Wine.create({
@@ -59,22 +61,22 @@ router.post("/wines/create", function (req, res) {
 });
 
 
-// router.put("/api/wines/:id", function(req, res) {
-//   var condition = "id = " + req.params.id;
+// // router.put("/api/wines/:id", function(req, res) {
+// //   var condition = "id = " + req.params.id;
 
-//   console.log("condition", condition);
+// //   console.log("condition", condition);
 
-//   wine.update({
-//     taste: req.body.taste
-//   }, condition, function(result) {
-//     if (result.changedRows == 0) {
-//       // If no rows were changed, then the ID must not exist, so 404
-//       return res.status(404).end();
-//     } else {
-//       res.status(200).end();
-//     }
-//   });
-// });
+// //   wine.update({
+// //     taste: req.body.taste
+// //   }, condition, function(result) {
+// //     if (result.changedRows == 0) {
+// //       // If no rows were changed, then the ID must not exist, so 404
+// //       return res.status(404).end();
+// //     } else {
+// //       res.status(200).end();
+// //     }
+// //   });
+// // });
 
 // put route for sequelize
 router.put("/wines/update/:id", function (req, res) {
@@ -92,18 +94,18 @@ router.put("/wines/update/:id", function (req, res) {
   });
 });
 
-// router.delete("/api/wines/:id", function(req, res) {
-//   var condition = "id = " + req.params.id;
+// // router.delete("/api/wines/:id", function(req, res) {
+// //   var condition = "id = " + req.params.id;
 
-//   wine.delete(condition, function(result) {
-//     if (result.affectedRows == 0) {
-//       // If no rows were changed, then the ID must not exist, so 404
-//       return res.status(404).end();
-//     } else {
-//       res.status(200).end();
-//     }
-//   });
-// });
+// //   wine.delete(condition, function(result) {
+// //     if (result.affectedRows == 0) {
+// //       // If no rows were changed, then the ID must not exist, so 404
+// //       return res.status(404).end();
+// //     } else {
+// //       res.status(200).end();
+// //     }
+// //   });
+// // });
 
 // Export routes for server.js to use.
 module.exports = router;

@@ -1,6 +1,18 @@
 module.exports = function (sequelize, DataTypes) {
     var Wine = sequelize.define("Wine", {
-        name: DataTypes.STRING,
+        // id: {
+        //     type: DataTypes.INTEGER,
+        //     primaryKey: true,
+        //     autoIncrement: true // Automatically gets converted to SERIAL for postgres
+        //   },
+
+        name: {
+            type: DataTypes.STRING,
+            validate: {
+                len: [5,30]
+              }
+        },
+        
         taste: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
@@ -8,9 +20,9 @@ module.exports = function (sequelize, DataTypes) {
     },
     {
             timestamps: false,
-        }
-        );
-    return Wine;
+            // freezeTableName: true 
+        });
+        return Wine;
 };
 
 
