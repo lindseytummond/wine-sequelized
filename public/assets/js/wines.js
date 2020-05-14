@@ -1,6 +1,10 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
+// $(document).ready(){
+
+// }
 $(function() {
   $(".change-taste").on("click", function(event) {
+    // console.log(wines)
     var id = $(this).data("id");
     var newTaste = $(this).data("newtaste");
 
