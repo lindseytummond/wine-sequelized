@@ -1,6 +1,7 @@
 var express = require("express");
+var Handlebars = require('handlebars');
 
-// var {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+var {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 // var bodyParser = require("body-parser");
 
 // var db = require("./models");
@@ -21,8 +22,8 @@ app.use(express.json());
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.engine("handlebars", exphbs({ defaultLayout: 'main', handlebars: allowInsecurePrototypeAccess(Handlebars)}));
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: 'main', handlebars: allowInsecurePrototypeAccess(Handlebars)}));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
