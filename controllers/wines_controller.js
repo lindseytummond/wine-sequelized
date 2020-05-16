@@ -23,13 +23,13 @@ router.get("/", function (req, res) {
 });
 
 // get route, edited to match sequelize
-router.get("/wines", async function (req, res) {
+router.get("/wines", function (req, res) {
   // replace old function with sequelize function
-  await db.Wine.findAll()
+  db.Wine.findAll()
     .then(function (dbWine) {
       // console.log(dbWine);
       var hbsObject = {wines: dbWine};
-      console.log(hbsObject.wines)
+      console.log(hbsObject.wines[0].name)
       res.render("index", hbsObject);
 
     });

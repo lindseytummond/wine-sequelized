@@ -11,7 +11,15 @@
         <ul>
           {{#each wines}}
             {{#unless taste}}
-              {{> wines/wine-block taste=true}}
+              {{!-- {{> wines/wine-block taste=true}} --}}
+              <li>
+              {{name}}
+
+                <button class="change-taste" data-id="{{id}}" data-newtaste="{{taste}}">
+                  {{#if taste}}Great Wine{{else}}Love to Try It{{/if}}
+                </button>
+
+              </li>
             {{/unless}}
           {{/each}}
         </ul>
@@ -24,7 +32,15 @@
         <ul>
           {{#each wines}}
             {{#if taste}}
-              {{> wines/wine-block taste=false}}
+              {{!-- {{> wines/wine-block taste=false}} --}}
+              <li>
+              {{name}}
+
+                <button class="change-taste" data-id="{{id}}" data-newtaste="{{taste}}">
+                  {{#if taste}}Great Wine{{else}}Love to Try It{{/if}}
+                </button>
+
+              </li>
             {{/if}}
           {{/each}}
         </ul>

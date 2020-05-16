@@ -5,22 +5,23 @@ module.exports = function (sequelize, DataTypes) {
         //     primaryKey: true,
         //     autoIncrement: true // Automatically gets converted to SERIAL for postgres
         //   },
+        name: DataTypes.STRING,
 
-        name: {
-            type: DataTypes.STRING,
-            validate: {
-                len: [5,30]
-              }
-        },
+        // name: {
+        //     type: DataTypes.STRING,
+        //     validate: {
+        //         len: [5,30]
+        //       }
+        // },
         
         taste: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
         }
-    },
-    {
-            timestamps: false,
-            // freezeTableName: true 
+    // }
+    // {
+    //         timestamps: false,
+    //         // freezeTableName: true 
         });
         return Wine;
 };

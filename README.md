@@ -1,8 +1,8 @@
 # Wine-Tasting 
-Full-stack web application logging wines you have tried with MySQL, Node, Esxpress, Handlebars and a self-created ORM (Object Relational Manager).
+Full-stack web application logging wines you have tried with MySQL, Node, Esxpress, Handlebars and Sequelize.
 
 ## Overview: 
-The Wine-Tasting app uses Node and MySQL to query and route data in the app and Handlebars to generate the HTML.
+The Wine-Tasting app uses Node and Sequelize to query and route data in the app and Handlebars to generate the HTML.
 
 ## Author:
 Lindsey Tummond
@@ -15,8 +15,8 @@ Future developments would include creating additional features to include wine t
 
 ## Learning Points:
 - File management for different sections of a project for clear organization for fellow developers future use.
-- Creating an `orm.js` file within the config directory to setup the code to connect Node to MySQL.
-- Defining methods `all`, `create`, and `update` to execute necessary MySQL commands in the controllers in order to retrieve and store data in the database.
+- Sequelize ORM methods 
+- Defining methods `findAll`, `create`, and `update` to execute necessary commands in the controllers in order to retrieve and store data in the database.
 - Utilizing Handlebars templates to generate client-side HTML.
 
 ## Technologies:
@@ -28,16 +28,17 @@ Future developments would include creating additional features to include wine t
     -	Express
     -   Handlebars
     -   MySQL
+    -   Sequelize
 -   GitHub
 -   Heroku
 
 ## How to Use:
-Use the following link https://mysterious-oasis-32428.herokuapp.com/ to open the application. <br>
+Use the following link https://ancient-bastion-61303.herokuapp.com/ to open the application. <br>
 Use the 'Wines I want to Try' and 'Wines I have Tried' sections to log your wine tasting. <br>
 Likewise, utilize the 'Add Wine' button to log different wine varietals you have explored.
 
 ## App Example:
 
-<a href="https://mysterious-oasis-32428.herokuapp.com/" target="_blank">
+<a href="https://ancient-bastion-61303.herokuapp.com/" target="_blank">
    <img src="public/assets/img/wine-tasting.png">
 </a>
