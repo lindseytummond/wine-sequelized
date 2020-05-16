@@ -27,7 +27,7 @@ router.get("/wines", function (req, res) {
   // replace old function with sequelize function
   db.Wine.findAll()
     .then(function (dbWine) {
-      // console.log(dbWine);
+      console.log(dbWine);
       var hbsObject = {wines: dbWine};
       console.log(hbsObject.wines[0].name)
       res.render("index", hbsObject);
@@ -48,11 +48,10 @@ router.get("/wines", function (req, res) {
 // });
 
 // post route for sequelize
-router.post("/wines/create", function (req, res) {
+router.post("/api/wines/create", function (req, res) {
   // edit create for new wine
-  db.Wine.create({
-    wine_name: req.body.wine_name,
-  })
+  console.log('REQUEST',req.body)
+  db.Wine.create(req.body)
     .then(function (dbWine) {
       console.log(dbWine);
       // redirect
@@ -79,8 +78,9 @@ router.post("/wines/create", function (req, res) {
 // // });
 
 // put route for sequelize
-router.put("/wines/update/:id", function (req, res) {
+router.put("/api/wines/:id", function (req, res) {
   // update one of the wines
+  console.log(req)
   db.Wine.update({
     taste: true
   },

@@ -33,10 +33,12 @@ $(function() {
       name: $("#wine").val().trim(),
       // taste: $("[name=taste]:checked").val().trim(),
       taste: 0
+
     };
+    console.log(newWine)
 
     // Send the POST request.
-    $.ajax("/api/wines", {
+    $.ajax("/api/wines/create", {
       type: "POST",
       data: newWine
     }).then(
