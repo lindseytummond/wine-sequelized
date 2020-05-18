@@ -17,11 +17,11 @@ module.exports = function (sequelize, DataTypes) {
         taste: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
-        }
-    // }
-    // {
-    //         timestamps: false,
-    //         // freezeTableName: true 
+        },
+    
+    
+            timestamps: false,
+            // freezeTableName: true 
         });
         return Wine;
 };
