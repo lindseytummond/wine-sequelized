@@ -18,9 +18,12 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             defaultValue: false
         },
+
+        createdAt: DataTypes.DATETIME,
+        updatedAt: DataTypes.DATETIME,
     
     
-            timestamps: false,
+            // timestamps: false,
             // freezeTableName: true 
         });
         return Wine;
