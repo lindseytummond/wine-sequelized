@@ -19,8 +19,8 @@ module.exports = function (sequelize, DataTypes) {
             defaultValue: false
         },
 
-        createdAt: DataTypes.DATETIME,
-        updatedAt: DataTypes.DATETIME,
+        // createdAt: DataTypes.DATETIME,
+        // updatedAt: DataTypes.DATETIME,
     
     
             // timestamps: false,
