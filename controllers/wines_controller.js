@@ -29,7 +29,7 @@ router.get("/wines", function (req, res) {
     .then(function (dbWine) {
       console.log(dbWine);
       var hbsObject = {wines: dbWine};
-      console.log(hbsObject.wines[0].name)
+      // console.log(hbsObject.wines[0].name)
       res.render("index", hbsObject);
 
     });
